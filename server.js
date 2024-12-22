@@ -13,6 +13,8 @@ const cors = require('cors');
 const app = express();
 
 // Serve static files from the React app
+const path = require('path');
+
 app.use(express.static(path.join(__dirname, "../client/build")));
 
 app.get("*", (req, res) => {
